@@ -1,0 +1,43 @@
+.hover-undo-underline:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-undo-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0.15);
+    transform-origin: bottom left;
+    background-color: var(--colour3);
+    transition: transform 0.3s ease-out;
+}
+
+#rust-container:hover {
+    z-index: 99;
+}
+
+.text-line-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 1px;
+    transform-origin: center left;
+    transform: scaleY(0.89);
+    background-color: var(--colour3);
+}
+
+section {
+    height: 100vh;
+}
+
+.skills-grid {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fill, 16rem);
+    justify-content: center;
+}
